@@ -1,0 +1,72 @@
+:root {
+  /* Preset Colors */
+  //   --color-primary: hsl(245deg, 100%, 60%);
+  //   --color-secondary: hsl(333deg, 100%, 45%);
+  //   --color-tertiary: hsl(204deg, 67%, 85%);
+  //   --color-tertiary-2: hsl(204, 65%, 69%);
+  //   --color-neutral-100: #efefef;
+  //   --color-text: hsl(222deg, 22%, 5%);
+  //   --color-text-2: hsl(0, 0%, 40%);
+
+  /* Preset Fonts */
+  --ff-primary: "Poppins", sans-serif;
+  /* font-family: Inter, Avenir, Helvetica, Arial, sans-serif; */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Basic Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  //   border: 1px solid black;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* General */
+body {
+  font-family: var(--ff-primary);
+  font-size: 1.8rem;
+  line-height: 1.7;
+  font-weight: 400;
+  margin: 0;
+  // color: var(--color-text);
+  // background-color: var(--color-neutral-100);
+  // transition: color 350ms ease 0s, background 350ms ease 0s;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* helpers */
+.container {
+  width: 100%;
+  max-width: 1300px;
+  padding: 0 1.5em;
+}
+
+.main-section {
+  margin: 4em auto 7em auto;
+
+  max-width: 700px;
+  width: 100%;
+}
