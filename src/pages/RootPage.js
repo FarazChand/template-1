@@ -1,5 +1,17 @@
 import React from "react";
+import { Outlet } from "react-router-dom";
 
-export const root = () => {
-  return <div>root</div>;
+import { MainNavigation } from "../components";
+import { Footer } from "../components";
+
+const RootPage = () => {
+  return (
+    <>
+      <MainNavigation />
+      <Outlet />
+      <Footer />
+    </>
+  );
 };
+
+export default RootPage;
