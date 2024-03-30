@@ -1,16 +1,19 @@
 import React, { useState } from "react";
 import { HiMenuAlt4, HiX } from "react-icons/hi";
-import { MdDarkMode } from "react-icons/md";
 import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
 
 import "./MainNavigation.scss";
+import genericLogo from "../assets/generic_logo.png";
+
+// Not sure why I cant do it this way
+// import images from "../assets/index";
 
 const MainNavigation = () => {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <header className="header">
+    <header className="header container">
       {/* <div className="app__navbar-logo">
         <img src={images.logo} alt="logo" />
       </div> */}
@@ -18,7 +21,9 @@ const MainNavigation = () => {
       <nav className="navbar">
         {/* Logo */}
         <div className="logo">
-          <NavLink to="/">Faraz Chand</NavLink>
+          {/* <img src={images.genericLogo} alt="logo" /> */}
+          <img src={genericLogo} alt="logo" />
+          {/* <NavLink to="/">Faraz Chand</NavLink> */}
         </div>
 
         {/* Desktop Nav */}
@@ -61,7 +66,6 @@ const MainNavigation = () => {
                   </li>
                 ))}
               </ul>
-              <div className="icon-container"></div>
             </motion.div>
           )}
         </div>

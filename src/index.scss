@@ -4,9 +4,10 @@
   //   --color-secondary: hsl(333deg, 100%, 45%);
   //   --color-tertiary: hsl(204deg, 67%, 85%);
   //   --color-tertiary-2: hsl(204, 65%, 69%);
-  //   --color-neutral-100: #efefef;
-  //   --color-text: hsl(222deg, 22%, 5%);
+  --color-neutral-100: #efefef;
+  --color-text: hsl(222deg, 22%, 5%);
   //   --color-text-2: hsl(0, 0%, 40%);
+  //   --color-white: hsl(0, 0%, 100%);
 
   /* Preset Fonts */
   --ff-primary: "Poppins", sans-serif;
@@ -43,9 +44,9 @@ body {
   line-height: 1.7;
   font-weight: 400;
   margin: 0;
-  // color: var(--color-text);
-  // background-color: var(--color-neutral-100);
-  // transition: color 350ms ease 0s, background 350ms ease 0s;
+  color: var(--color-text);
+  background-color: var(--color-neutral-100);
+  transition: color 350ms ease 0s, background 350ms ease 0s;
 }
 
 a {
@@ -61,7 +62,10 @@ ul {
 .container {
   width: 100%;
   max-width: 1300px;
-  padding: 0 1.5em;
+  margin: 0 auto;
+
+  //overwrites all padding on other elements, so we leave this off
+  // padding: 0 1.5em;
 }
 
 .main-section {

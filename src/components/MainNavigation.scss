@@ -1,39 +1,55 @@
 header {
+  padding: 1em 2em;
+  background-color: var(--color-tertiary);
+
   display: flex;
   justify-content: center;
   align-items: center;
-
-  padding: 1em 0;
-  background-color: var(--color-tertiary);
-
   flex-direction: column;
 
+  @media screen and (min-width: 400px) {
+    padding: 1em 3em;
+  }
+
   @media screen and (min-width: 900px) {
-    justify-content: space-around;
+    justify-content: space-between;
     flex-direction: row;
-    align-items: baseline;
+    // align-items: baseline;
   }
 
   .navbar {
     width: 100%;
-    max-width: 800px;
-    padding: 0 2em 0 5em;
+
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
 
-    @media screen and (max-width: 400px) {
-      padding: 0 2em 0 2em;
+    @media screen and (min-width: 400px) {
+      padding: 0;
+    }
+
+    @media screen and (min-width: 900px) {
+      max-width: 700px;
     }
 
     .logo {
+      /* For Text Logos like H1s */
+
       display: flex;
       justify-content: start;
+      align-items: center;
 
-      font-size: 2.25rem;
-      font-weight: 600;
-      color: var(--color-primary);
-      width: 250px;
+      // font-size: 2.25rem;
+      // font-weight: 600;
+      // color: var(--color-primary);
+      // width: 250px;
+
+      /* For Image Logos*/
+
+      img {
+        width: 180px;
+        height: auto;
+      }
 
       a {
         display: flex;
@@ -76,23 +92,6 @@ header {
       }
     }
   }
-
-  .darkmode-icon {
-    height: 25px;
-    width: 25px;
-    align-self: center;
-    margin-right: 5em;
-    color: grey;
-    transition: color 0.3s ease;
-
-    &:hover {
-      color: black;
-    }
-
-    @media screen and (max-width: 900px) {
-      display: none;
-    }
-  }
 }
 
 //
@@ -107,88 +106,83 @@ header {
   justify-content: center;
   align-items: center;
 
+  @media screen and (min-width: 900px) {
+    display: none;
+  }
+
   svg {
     width: 70%;
     height: 70%;
-    color: var(--white-color);
+    color: var(--color-text);
+  }
+}
+
+.motion-div {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+  padding: 1rem;
+
+  width: 90%;
+  height: 100vh;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-direction: column;
+
+  background-color: var(--color-neutral-100);
+
+  background-image: url("../assets/bgWhite.png");
+  //    background-color: var(--white-color);
+  background-size: cover;
+  background-repeat: repeat;
+
+  box-shadow: 0 0 20px rgba(168, 168, 168, 0.2);
+
+  svg {
+    width: 35px;
+    height: 35px;
+    color: var(--secondary-color);
+    margin: 0.5rem 1rem;
   }
 
-  .motion-div {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    z-index: 5;
-    padding: 1rem;
-
-    width: 90%;
-    height: 100vh;
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
 
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+    justify-content: flex-start;
+    align-items: flex-start;
     flex-direction: column;
 
-    background-color: var(--color-neutral-100);
+    li {
+      margin: 1rem;
 
-    // background: url("../../assets/bgWhite.png");
-    // background-color: var(--white-color);
-    // background-size: cover;
-    // background-repeat: repeat;
+      a {
+        color: var(--color-text);
+        text-decoration: none;
+        font-size: 1.6rem;
+        font-weight: 500;
 
-    box-shadow: 0 0 20px rgba(168, 168, 168, 0.2);
+        transition: all 0.3s ease-in-out;
 
-    svg {
-      width: 35px;
-      height: 35px;
-      color: var(--secondary-color);
-      margin: 0.5rem 1rem;
-    }
-
-    ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      width: 100%;
-
-      display: flex;
-      justify-content: flex-start;
-      align-items: flex-start;
-      flex-direction: column;
-
-      li {
-        margin: 1rem;
-
-        a {
-          color: var(--color-text);
-          text-decoration: none;
-          font-size: 1.6rem;
-          font-weight: 500;
-
-          transition: all 0.3s ease-in-out;
-
-          &:hover {
-            color: red;
-          }
+        &:hover {
+          color: red;
         }
-      }
-    }
-    @media screen and (min-width: 900px) {
-      display: none;
-    }
-
-    .icon-container {
-      width: 100%;
-
-      .mobile-darkmode-icon {
-        justify-self: flex-start;
-        width: 25px;
-        height: 25px;
       }
     }
   }
   @media screen and (min-width: 900px) {
     display: none;
+  }
+
+  .icon-container {
+    width: 100%;
   }
 }
