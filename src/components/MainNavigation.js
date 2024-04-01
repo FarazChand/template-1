@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { HiMenuAlt4, HiX } from "react-icons/hi";
 import { motion } from "framer-motion";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 import "./MainNavigation.scss";
-import genericLogo from "../assets/generic_logo.png";
+// import genericLogo from "../assets/generic_logo.png";
 
 // Not sure why I cant do it this way
-// import images from "../assets/index";
+import images from "../assets/index";
 
 const MainNavigation = () => {
   const [toggle, setToggle] = useState(false);
@@ -21,13 +21,15 @@ const MainNavigation = () => {
       <nav className="navbar">
         {/* Logo */}
         <div className="logo">
-          {/* <img src={images.genericLogo} alt="logo" /> */}
-          <img src={genericLogo} alt="logo" />
+          <Link to="/">
+            <img src={images.genericLogo} alt="logo" />
+          </Link>
+          {/* <img src={genericLogo} alt="logo" /> */}
           {/* <NavLink to="/">Faraz Chand</NavLink> */}
         </div>
 
         {/* Desktop Nav */}
-        <div className="nav-container">
+        <div className="desktop-nav">
           <ul className="navbar-list">
             {["Posts", "About", "Contact"].map((item) => (
               <li className="navbar-item" key={`link-${item}`}>
@@ -52,7 +54,7 @@ const MainNavigation = () => {
 
           {toggle && (
             <motion.div
-              className="motion-div"
+              className="nav--motion-div"
               whileInView={{ x: [100, 0] }}
               transition={{ duration: 0.55, ease: "easeOut" }}
             >

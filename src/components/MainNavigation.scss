@@ -2,6 +2,9 @@ header {
   padding: 1em 2em;
   background-color: var(--color-tertiary);
 
+  /* vh test*/
+  height: 15vh;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,18 +36,9 @@ header {
     }
 
     .logo {
-      /* For Text Logos like H1s */
-
       display: flex;
       justify-content: start;
       align-items: center;
-
-      // font-size: 2.25rem;
-      // font-weight: 600;
-      // color: var(--color-primary);
-      // width: 250px;
-
-      /* For Image Logos*/
 
       img {
         width: 180px;
@@ -57,7 +51,8 @@ header {
       }
     }
 
-    .nav-container {
+    /* Desktop Menu*/
+    .desktop-nav {
       display: flex;
       align-items: baseline;
 
@@ -94,8 +89,7 @@ header {
   }
 }
 
-//
-
+/* Mobile Menu*/
 .mobile-menu {
   width: 35px;
   height: 35px;
@@ -117,7 +111,7 @@ header {
   }
 }
 
-.motion-div {
+.nav--motion-div {
   position: fixed;
   top: 0;
   bottom: 0;

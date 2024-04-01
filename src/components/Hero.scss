@@ -1,0 +1,35 @@
+.hero--container {
+  background-color: blueviolet;
+  background-image: url(../assets/generic-hero-pic.jpg);
+  background-size: cover;
+  background-position: center;
+  color: white;
+  height: 85vh;
+  padding: 0 3em;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+
+  //   @media screen and (min-width: 900px) {
+  //     align-items: center;
+  //   }
+
+  /* Overlay */
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+  }
+
+  h1,
+  p {
+    z-index: 1;
+  }
+}
